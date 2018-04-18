@@ -11,9 +11,9 @@ import time
 
 
 camera = PiCamera()
-camera.resolution = (1280, 800)
+camera.resolution = (640, 480)
 camera.framerate = 32
-rawCapture = PiRGBArray(camera, size=(1280, 800))
+rawCapture = PiRGBArray(camera, size=(640, 480))
 time.sleep(0.1)
 
 app = Flask(__name__)
@@ -55,7 +55,7 @@ def display(frame, decoded_objs):
         frame = cv2.rectangle(frame,
                               (left, top),
                               (left + width, height + top),
-                              (255, 255, 0), 2)
+                              (255, 255, 255), 2)
     return frame
     
 if __name__ == '__main__':
