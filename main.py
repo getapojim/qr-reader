@@ -11,9 +11,9 @@ import time
 
 
 camera = PiCamera()
-camera.resolution = (640, 480)
+camera.resolution = (1280, 800)
 camera.framerate = 32
-rawCapture = PiRGBArray(camera, size=(640, 480))
+rawCapture = PiRGBArray(camera, size=(1280, 800))
 time.sleep(0.1)
 
 app = Flask(__name__)
